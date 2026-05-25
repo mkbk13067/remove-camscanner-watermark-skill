@@ -1,0 +1,4 @@
+interface:
+  display_name: "Remove CamScanner Watermark"
+  short_description: "Remove only CamScanner overlay watermarks from scanned PDFs."
+  default_prompt: "Use this skill to remove Scan/CamScanner overlay watermarks from PDF files while preserving document content and native watermarks."
