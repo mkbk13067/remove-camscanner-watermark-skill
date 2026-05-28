@@ -25,7 +25,7 @@ cd .\apps\camscanner-cleaner
 powershell -NoProfile -ExecutionPolicy Bypass -File .\build.ps1
 ```
 
-The release executable is published on the GitHub Releases page as `扫描全能王水印清理器.exe`.
+The release executable is published on the GitHub Releases page as `camscanner-cleaner-v0.1.0-windows.exe` with a Chinese display label.
 
 ## Safety Boundary
 
@@ -118,7 +118,7 @@ cd .\apps\camscanner-cleaner
 powershell -NoProfile -ExecutionPolicy Bypass -File .\build.ps1
 ```
 
-发布版 `.exe` 会上传到 GitHub Releases 页面，文件名为 `扫描全能王水印清理器.exe`。
+发布版 `.exe` 会上传到 GitHub Releases 页面，下载文件名为 `camscanner-cleaner-v0.1.0-windows.exe`，页面上保留中文显示标签。
 
 ## 安全边界
 
