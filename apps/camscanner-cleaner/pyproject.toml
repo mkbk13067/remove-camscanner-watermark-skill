@@ -1,0 +1,30 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "camscanner-cleaner"
+version = "0.1.0"
+description = "Windows desktop PDF cleaner for safe Scan/CamScanner overlay watermark removal."
+requires-python = ">=3.11"
+dependencies = [
+    "pypdf>=6.0",
+    "PyMuPDF>=1.26",
+    "PySide6>=6.10",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=8",
+    "pyinstaller>=6",
+]
+
+[project.scripts]
+camscanner-cleaner = "camscanner_cleaner.app:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["src"]

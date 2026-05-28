@@ -4,6 +4,29 @@ A Codex skill for removing Scan/CamScanner overlay watermarks from scanned PDF f
 
 The bundled script removes only small independent PDF content-stream image blocks that match the CamScanner overlay pattern. It does not rasterize pages, inpaint images, or remove watermarks that are already embedded in the scanned page image.
 
+## Desktop App
+
+This repository also includes a Windows desktop app in `apps/camscanner-cleaner`.
+
+The desktop app lets users drag in one or more PDF files, safely detects independent Scan/CamScanner overlay marks, and writes cleaned copies next to the original PDFs. It never overwrites source files.
+
+Run from source:
+
+```powershell
+cd .\apps\camscanner-cleaner
+python -m pip install -e .[dev]
+python .\run_app.py
+```
+
+Build the Windows one-file executable:
+
+```powershell
+cd .\apps\camscanner-cleaner
+powershell -NoProfile -ExecutionPolicy Bypass -File .\build.ps1
+```
+
+The release executable is published on the GitHub Releases page as `扫描全能王水印清理器.exe`.
+
 ## Safety Boundary
 
 Use this only on documents you have the right to modify.
@@ -73,6 +96,29 @@ python "$env:USERPROFILE\.codex\skills\.system\skill-creator\scripts\quick_valid
 这是一个用于 Codex 的 skill，可以从扫描型 PDF 中删除扫描全能王 / CamScanner 叠加水印，同时保留文档正文和文件自带水印。
 
 内置脚本只会删除符合扫描全能王叠加水印特征的、小型、独立 PDF 内容流图片块。它不会把页面重新栅格化，不会做图像修复，也不会删除已经烘焙在扫描页面图片里的水印。
+
+## 桌面软件
+
+仓库也包含 Windows 桌面软件源码，位置在 `apps/camscanner-cleaner`。
+
+桌面软件支持拖入一个或多个 PDF，先安全检测扫描全能王独立角标，再在原文件旁边生成去水印副本。它不会覆盖原文件。
+
+从源码运行：
+
+```powershell
+cd .\apps\camscanner-cleaner
+python -m pip install -e .[dev]
+python .\run_app.py
+```
+
+打包 Windows 单文件程序：
+
+```powershell
+cd .\apps\camscanner-cleaner
+powershell -NoProfile -ExecutionPolicy Bypass -File .\build.ps1
+```
+
+发布版 `.exe` 会上传到 GitHub Releases 页面，文件名为 `扫描全能王水印清理器.exe`。
 
 ## 安全边界
 
